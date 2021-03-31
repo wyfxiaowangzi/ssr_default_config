@@ -633,7 +633,7 @@ install_prepare_password(){
 install_prepare_port() {
     while true
     do
-    dport=$(shuf -i 9000-19999 -n 1)
+    dport=$(shuf -i 33330-33339 -n 1)
     echo -e "Please enter a port for ${software[${selected}-1]} [1-65535]"
     [ -z "${shadowsocksport}" ] && shadowsocksport=${dport}
     expr "${shadowsocksport}" + 1 &>/dev/null
